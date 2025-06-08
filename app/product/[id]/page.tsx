@@ -29,6 +29,7 @@ async function getProduct(id: string) {
 }
 
 async function getRecommendedProducts(category: string, currentId: string) {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
   const res = await fetch(
     `https://fakestoreapi.com/products/category/${encodeURIComponent(
       category
